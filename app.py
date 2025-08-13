@@ -64,4 +64,5 @@ def bar():
     return render_template('bar.html',chart_url = url_for('static',filename='chart.png'))
 
 if (__name__) == "__main__":
-    app.run(debug=True)
+    app.run(port = 3000,debug=True)
+
