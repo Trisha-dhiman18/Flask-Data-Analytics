@@ -7,8 +7,8 @@ app = Flask(__name__)
 
 data_df = pd.DataFrame()
 
-#@app.route("/page1")
-#def page1():
+@app.route("/page1")
+def page1():
     # Step 1: Read CSV file into Pandas DataFrame
     #df = pd.read_csv("academicStress.csv")
     #df.head()
@@ -64,5 +64,6 @@ def bar():
     return render_template('bar.html',chart_url = url_for('static',filename='chart.png'))
 
 if (__name__) == "__main__":
-    app.run(port = 3000,debug=True)
+    app.run(port = 3000, host = "0.0.0.0", debug = False)
+
 
